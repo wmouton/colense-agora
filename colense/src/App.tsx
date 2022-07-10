@@ -30,6 +30,8 @@ import ToastConfig from './subComponents/toastConfig';
 import shouldAuthenticate from './utils/shouldAuthenticate';
 import KeyboardManager from 'react-native-keyboard-manager';
 
+import PollContextProvider from './components/PollContext';
+
 
 if (Platform.OS === 'ios') {
   KeyboardManager.setEnable(true);
@@ -42,6 +44,7 @@ const App: React.FC = () => {
   const [phrase, onChangePhrase] = useState('');
 
   return (
+    <PollContextProvider>
     <ImageBackground
       source={{uri: $config.BG}}
       style={{flex: 1}}
@@ -90,6 +93,7 @@ const App: React.FC = () => {
         </StorageProvider>
       </SafeAreaView>
     </ImageBackground>
+    </PollContextProvider>
   );
   // return <div> hello world</div>; {/* isn't join:phrase redundant now, also can we remove joinStore */}
 };

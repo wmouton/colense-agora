@@ -90,6 +90,7 @@ const Join = (props: joinProps) => {
               <></>
             )}
           </View>
+          <Text style={style.heading}>Create a Poll</Text>
         </View>
       </View>
     </ScrollView>
