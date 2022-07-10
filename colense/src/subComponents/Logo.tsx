@@ -30,11 +30,11 @@ export default function Logo() {
   );
 }
 
+// Default logo styles
 const styles = StyleSheet.create({
   logo: {
     width: '100%',
-    height: '800%',
-    marginBottom: '100px',
+    height: '200%',
   },
   marginAuto: {
     width: '30%',
@@ -45,3 +45,20 @@ const styles = StyleSheet.create({
     marginHorizontal: 'auto',
   },
 });
+
+// Custom logo styles
+// const styles = StyleSheet.create({
+//   logo: {
+//     width: '100%',
+//     height: '500%',
+//     marginBottom: '100px',
+//   },
+//   marginAuto: {
+//     width: '30%',
+//     height: '30%',
+//     minWidth: 60,
+//     minHeight: 30,
+//     // height: 'auto',
+//     marginHorizontal: 'auto',
+//   },
+// });

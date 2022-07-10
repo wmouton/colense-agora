@@ -14,10 +14,13 @@ import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import chatContext, {controlMessageEnum} from './ChatContext';
 import ColorContext from './ColorContext';
 import SecondaryButton from '../atoms/SecondaryButton';
+import TextInput from '../atoms/TextInput';
+import { PollContext } from './PollContext';
 
 const HostControlView = () => {
   const {sendControlMessage} = useContext(chatContext);
   const {primaryColor} = useContext(ColorContext);
+  const [question, setQuestion] = useContext(PollContext);
   return (
     <>
       <Text style={style.heading}>Host Controls</Text>
@@ -32,6 +35,14 @@ const HostControlView = () => {
           <SecondaryButton
             onPress={() => sendControlMessage(controlMessageEnum.muteVideo)}
             text={'Mute all videos'}
+          />
+        </View>
+        <Text style={style.heading}>Create a Poll</Text>
+        <View>
+          <Text 
+            value={question}
+            onChangeText={setQuestion}
+            placeholder='Poll Question'
           />
         </View>
       </View>
