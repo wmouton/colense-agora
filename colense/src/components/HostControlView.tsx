@@ -39,7 +39,7 @@ const HostControlView = () => {
         </View>
         <Text style={style.heading}>Create a Poll</Text>
         <View>
-          <Text 
+          <TextInput 
             value={question}
             onChangeText={setQuestion}
             placeholder='Poll Question'
